@@ -250,7 +250,7 @@ h4 {
 		}
 /* -- Flags -- */
 ul#flags {
-	margin: 1px 0 0 0;
+	margin: 1px 0 0 15px;
 	padding: 0;
 }
 
@@ -291,6 +291,34 @@ ul#flags {
 	#flags li.en {
 		margin-right: 6px;
 	}
+
+	/* -- Flags link-- */
+ul#flags_link {
+	margin: 1px 0 0 0;
+	padding: 0;
+}
+
+#flags_link {
+	overflow: auto;
+	float: right;
+}
+
+	#flags_link li {
+		text-align: right;
+		font-size: 12px;
+		padding: 0;
+		display: inline;
+		list-style-type: none;
+	}
+
+	#flags_link a {
+		text-decoration: none;
+	}
+	
+	#flags_link img {
+		vertical-align: middle;
+	}
+
 /***** Top Navigation *******/
 #header ul.nav {
 	margin: 5px 15px 0 0;
