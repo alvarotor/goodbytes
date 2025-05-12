@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: goodbytes.net
-Token: d76fbe24919a46eaf930ae97f951ea448927144985ad8311ba1d1fad39b3e2f9
