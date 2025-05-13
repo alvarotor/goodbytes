@@ -36,6 +36,8 @@ jobs:
         with:
           node-version: '20' # Specify your Node.js version
           cache: 'pnpm' # Or 'yarn', 'pnpm'
+      - name: Install pnpm
+        run: npm install -g pnpm@8 # Install pnpm explicitly
       - name: Install dependencies # Add this step
         run: pnpm install # Or yarn install, pnpm install
       - name: Build project # Add this step
