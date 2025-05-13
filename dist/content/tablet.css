@@ -1,0 +1,56 @@
+body {
+	margin-left: 0px;
+	margin-right: 0px;
+	background: #eee;
+}
+
+#header, #teaser, #content, #footer, #content-projects {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#content, #content-projects, #sidebar {
+	padding-top: 40px;
+}
+
+.innerbg .wrap {
+	background: none;
+}
+
+.wrap {
+	background-color: #fff;
+}
+
+p.author {
+	margin-bottom: 30px;
+}
+
+.testimonial p.quote {
+	background-position: 90% 0;
+}
+
+#teaser img.alvaro {
+	margin: 0 0px 0px 70px;
+	float: right;
+	width: 230px;
+	/* border: 1px solid #fff; */
+}
+
+.innerbg {
+	margin-bottom: 0;
+	padding: 1px 30px 20px 30px;
+}
+
+#teaser {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-right: 0px;
+}
+
+h2, .vademecum h2.blog-title {
+	margin-top: 0px;
+}
+
+.home #sidebar {
+	padding-top: 0;
+}
