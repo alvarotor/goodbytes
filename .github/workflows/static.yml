@@ -36,7 +36,10 @@ jobs:
         with:
           node-version: '20'
           cache: 'pnpm'
-          pnpm-version: 8 # Specify pnpm version, relying on setup-node to install it
+      - name: Enable Corepack and Install pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@8.x --activate
       - name: Install dependencies
         run: pnpm install
       - name: Build project
