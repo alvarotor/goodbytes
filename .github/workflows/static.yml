@@ -53,7 +53,9 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          # Path to the directory containing the static assets to deploy.
+          # This should be the output directory of your build command (e.g., dist, build, public, _site).
+          path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
