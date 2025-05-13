@@ -22,7 +22,6 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
@@ -31,15 +30,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'pnpm'
-      - name: Enable Corepack and Install pnpm
+      - name: Check pnpm
         run: |
-          corepack enable
-          corepack prepare pnpm@8.x --activate
+          echo "PATH is: $PATH"
+          which pnpm
+          pnpm --version
       - name: Install dependencies
         run: pnpm install
       - name: Build project
@@ -49,7 +53,6 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
           path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
