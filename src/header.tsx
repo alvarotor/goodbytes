@@ -1,36 +1,9 @@
-import { useLocation } from "preact-iso";
+import { NavLink } from "./util/navLink";
 import { useTranslation } from "react-i18next";
-import type { JSX } from "preact";
 
 export function Header() {
-  const { t } = useTranslation();
-  const { i18n } = useTranslation();
-  const location = useLocation();
+  const { t, i18n } = useTranslation();
   
-  const changeLanguage = (language: string) => {
-    i18n.changeLanguage(language);
-  };
-
-  // Custom Link component with proper type definitions
-  interface NavLinkProps {
-    href: string;
-    className?: string;
-    children: JSX.Element | string | (JSX.Element | string)[];
-  }
-
-  const NavLink = ({ href, className, children }: NavLinkProps) => {
-    const handleClick = (e: MouseEvent) => {
-      e.preventDefault();
-      location.route(href);
-    };
-    
-    return (
-      <a href={href} className={className} onClick={handleClick}>
-        {children}
-      </a>
-    );
-  };
-
   return (
     <div id="header">
       <div class="inner">
@@ -41,7 +14,7 @@ export function Header() {
           <li class="en">
             <a 
               className={i18n.language === 'en' ? 'on' : ''} 
-              onClick={() => changeLanguage('en')}
+              onClick={() => i18n.changeLanguage('en')}
             >
               EN
             </a>
@@ -49,7 +22,7 @@ export function Header() {
           <li class="es">
             <a 
               className={i18n.language === 'es' ? 'on' : ''} 
-              onClick={() => changeLanguage('es')}
+              onClick={() => i18n.changeLanguage('es')}
             >
               ES
             </a>
