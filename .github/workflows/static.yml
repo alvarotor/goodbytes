@@ -31,17 +31,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Set up Node.js # Add this step, adjust if not a Node.js project
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Specify your Node.js version
-          cache: 'pnpm' # Or 'yarn', 'pnpm'
-      - name: Install pnpm
-        run: npm install -g pnpm@8 # Install pnpm explicitly
-      - name: Install dependencies # Add this step
-        run: pnpm install # Or yarn install, pnpm install
-      - name: Build project # Add this step
-        run: npm run build # Or your specific build command
+          node-version: '20'
+          cache: 'pnpm'
+          pnpm-version: 8 # Specify pnpm version, relying on setup-node to install it
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build project
+        run: pnpm run build
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
