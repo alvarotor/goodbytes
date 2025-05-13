@@ -1,7 +1,10 @@
 import { Header } from "./header"
 import Footer from "./footer"
+import { useTranslation } from "react-i18next";
+import { NavLink } from "./util/navLink";
 
 export default function App() {
+  const { t } = useTranslation();
   return (
     <>
       <Header />
@@ -10,34 +13,32 @@ export default function App() {
           <div>
             <img alt="Alvaro Torres" class="alvaro c1" src="content/alvaro.png" />
             <h1>
-              <span class="red">software architect</span>
+              <span class="red">{t("app.title.softwareArchitect")}</span>
               <br />
-              web developer
+              {t("app.title.webDeveloper")}
               <br />
-              <span class="red">mobile apps</span>
+              <span class="red">{t("app.title.mobileApps")}</span>
               <br />
-              Full stack engineer
+              {t("app.title.fullStackEngineer")}
               <br />
-              <span class="red">Freelance programmer</span>
+              <span class="red">{t("app.title.freelanceProgrammer")}</span>
               <br />
-              Remote programmer
+              {t("app.title.remoteProgrammer")}
             </h1>
             <p style="width: 75%">
               <strong>
-                Technology / Business / Programming / Software architecture / SEO
-                / Development Full Stack / Mobile Apps
+                {t("app.teaser.keywords")}
               </strong>
               <br />
-              If you are looking for a programmer architect who can meet your
-              quality expectations and offer to you good bytes, please do not
-              hesitate to <a href="contact.html">contact me</a>.
+              {t("app.teaser.contactIntro")}{" "}
+              <a href="contact.html">{t("contact")}</a>.
             </p>
             <p>
-              <strong>Experience:</strong> 15 years 
-              / {" "}
-              <strong>Projects:</strong> 70 
-              / {" "}
-              <strong>Lines of code:</strong> 7+ million
+              <strong>{t("app.teaser.experience")}</strong> {t("app.teaser.experienceYears")}
+              {" "} / {" "}
+              <strong>{t("app.teaser.projects")}</strong> {t("app.teaser.projectsCount")}
+              {" "} / {" "}
+              <strong>{t("app.teaser.linesOfCode")}</strong> {t("app.teaser.linesOfCodeCount")}
             </p>
             <p>
               <a
@@ -61,7 +62,7 @@ export default function App() {
       <div class="wrap">
         <div id="content">
           <h2>
-            <span class="red">Languages</span> or frameworks I use for my projects
+            <span class="red">{t("app.content.languagesTitlePart1")}</span> {t("app.content.languagesTitlePart2")}
           </h2>
           <ul id="logoshome">
             <li>
@@ -283,105 +284,76 @@ export default function App() {
           </ul>
           <div class="clear">&nbsp;</div>
           <h2>
-            <span class="red">Software Architect</span>, Professional Websites
-            Developer (full stack), Mobile apps
+            <span class="red">{t("app.content.softwareArchitectTitlePart1")},</span>
+            {" "}{t("app.content.softwareArchitectTitlePart2")}
           </h2>
+          {t("app.content.professionalDeveloperIntro")} 
+          {t("app.content.professionalProgrammerExperience")}
           <p>
-            A professional software Developer with
-            <strong> 15 years of experience </strong> in the IT industry. I am
-            highly specialized in developing websites, APIs, mobile apps and front
-            end development with a strong focus on quality and architecture, using
-            the latest technology and best programming patterns. Also, as a
-            complement to the full stack development I can program mobile
-            applications for your project or business.
-          </p>
-          <p>
-            As a professional programmer, I exclusively develop for you and your
-            business needs. I have worked in several countries which include the
-            UK, Ireland, Germany, Spain and South America. I have worked on more
-            than
-            <strong>70&nbsp;projects</strong>. The companies I have worked for
-            include many industries such as education, sports, fashion, travel,
-            music, telecommunications and energy, in several countries, remotely
-            or in house, as a freelancer or as employee, in a team or leading as
-            senior developer.
-          </p>
-          <p>
-            Note that I am also bilingual in Spanish and English which makes me
-            able to develop and work in both languages.
+            {t("app.content.bilingualNote")}
           </p>
           <h2>
-            Fields of <span class="red">Expertise</span>
+            {t("app.content.expertiseTitlePart1")} <span class="red">{t("app.content.expertiseTitlePart2")}</span>
           </h2>
           <ul class="twocolumns">
-            <li>Websites</li>
-            <li>Back End</li>
-            <li>Front End</li>
-            <li>APIs</li>
-            <li>Android apps</li>
-            <li>Hybrid and native apps</li>
-            <li>Services</li>
-            <li>Libraries</li>
-            <li>Windows desktop apps</li>
-            <li>SEO</li>
-            <li>Databases</li>
-            <li>Technology Consultancy</li>
-            <li>Presence in Internet</li>
-            <li>Design</li>
-            <li>Architecture</li>
-            <li>Engineering</li>
-            <li>Project Management</li>
-            <li>Project Planning</li>
-            <li>Customer Management</li>
-            <li>Etc.</li>
+            <li>{t("app.expertise.websites")}</li>
+            <li>{t("app.expertise.backEnd")}</li>
+            <li>{t("app.expertise.frontEnd")}</li>
+            <li>{t("app.expertise.apis")}</li>
+            <li>{t("app.expertise.androidApps")}</li>
+            <li>{t("app.expertise.hybridNativeApps")}</li>
+            <li>{t("app.expertise.services")}</li>
+            <li>{t("app.expertise.libraries")}</li>
+            <li>{t("app.expertise.windowsDesktopApps")}</li>
+            <li>{t("app.expertise.seo")}</li>
+            <li>{t("app.expertise.databases")}</li>
+            <li>{t("app.expertise.techConsultancy")}</li>
+            <li>{t("app.expertise.internetPresence")}</li>
+            <li>{t("app.expertise.design")}</li>
+            <li>{t("app.expertise.architecture")}</li>
+            <li>{t("app.expertise.engineering")}</li>
+            <li>{t("app.expertise.projectManagement")}</li>
+            <li>{t("app.expertise.projectPlanning")}</li>
+            <li>{t("app.expertise.customerManagement")}</li>
+            <li>{t("app.expertise.etc")}</li>
           </ul>
           <p>
-            Please visit my <a href="profile.html">Profile page</a> to find more
-            details about myself.
+            {t("app.content.profilePrompt")}{" "}
+            <NavLink href="profile">{t("app.content.profilePromptLink")}</NavLink>{" "}
+            {t("app.content.profilePromptSuffix")}
           </p>
         </div>
         <div id="sidebar">
           <div class="testimonial">
             <h3>
-              Best developers
-              <span class="red"> quotes</span>
+              {t("app.sidebar.quotesTitlePart1")}{" "}
+              <span class="red">{t("app.sidebar.quotesTitlePart2")}</span>
             </h3>
             <p class="quote">
-              There are two ways of constructing a software design: One way is to
-              make it so simple that there are obviously no deficiencies, and the
-              other way is to make it so complicated that there are no obvious
-              deficiencies. The first method is far more difficult.
+              {t("app.sidebar.quote1")}
             </p>
             <p class="author">
-              —C.A.R. Hoare (British computer scientist, winner of the 1980 Turing
-              Award)
+              {t("app.sidebar.author1")}
             </p>
             <p class="quote">
-              If debugging is the process of removing software bugs, then
-              programming must be the process of putting them in.
+              {t("app.sidebar.quote2")}
             </p>
             <p class="author">
-              —Edsger Dijkstra (Dutch computer scientist, winner of the 1972
-              Turing Award)
+              {t("app.sidebar.author2")}
             </p>
-            <p class="quote">Nine people can’t make a baby in a month.</p>
+            <p class="quote">{t("app.sidebar.quote3")}</p>
             <p class="author">
-              —Fred Brooks (American computer scientist, winner of the 1999 Turing
-              Award)
+              {t("app.sidebar.author3")}
             </p>
             <p class="quote">
-              Always code as if the guy who ends up maintaining your code will be
-              a violent psychopath who knows where you live.
+              {t("app.sidebar.quote4")}
             </p>
-            <p class="author">—Martin Golding</p>
+            <p class="author">{t("app.sidebar.author4")}</p>
             <p class="quote">
-              Most good programmers do programming not because they expect to get
-              paid or get adulation by the public, but because it is fun to
-              program.
+              {t("app.sidebar.quote5")}
             </p>
             <p class="author">
-              —Linus Torvalds (Finnish American, software engineer and hacker,
-              principal force behind the development of the Linux kernel)
+              {t("app.sidebar.author5")}
             </p>
           </div>
         </div>

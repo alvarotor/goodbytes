@@ -57,7 +57,7 @@ export function Header() {
               className={i18n.language === 'en' ? 'on' : ''} 
               onClick={() => i18n.changeLanguage('en')}
             >
-              EN
+              {t("enLang")}
             </a>
           </li>
           <li class="es">
@@ -65,7 +65,7 @@ export function Header() {
               className={i18n.language === 'es' ? 'on' : ''} 
               onClick={() => i18n.changeLanguage('es')}
             >
-              ES
+              {t("esLang")}
             </a>
           </li>
         </ul>
@@ -76,7 +76,7 @@ export function Header() {
               target="_blank"
               class="smallest-link"
             >
-              <img src="content/linkedin_small.png" alt="LinkedIn" />
+              <img src="content/linkedin_small.png" alt={t("linkedinAlt")} />
             </a>
           </li>
           <li>
@@ -85,7 +85,7 @@ export function Header() {
               target="_blank"
               class="smallest-link"
             >
-              <img src="content/GitHub_small.png" alt="GitHub" />
+              <img src="content/GitHub_small.png" alt={t("githubAlt")} />
             </a>
           </li>
         </ul>
