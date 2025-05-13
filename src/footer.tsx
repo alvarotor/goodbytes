@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next"
 
 export default function Footer() {
   const { t } = useTranslation()
+  
   return (
       <>
         <div class="clear"></div>
@@ -13,16 +14,16 @@ export default function Footer() {
           <div class="inner">
             <ul class="nav">
               <li>
-              <NavLink href="/">{t("home")}</NavLink>
+                <NavLink href="/">{t("home")}</NavLink>
               </li>
               <li>
-                <a href="profile.html">{t("profile")}</a>
+                <NavLink href="profile.html">{t("profile")}</NavLink>
               </li>
               <li>
-                <a href="cv.html">{t("cv")}</a>
+                <NavLink href="cv.html">{t("cv")}</NavLink>
               </li>
               <li>
-                <a href="contact.html">{t("contact")}</a>
+                <NavLink href="contact.html">{t("contact")}</NavLink>
               </li>
             </ul>
             <span class="soc-icons">
