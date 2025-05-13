@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next"
 
 export default function Footer() {
   const { t } = useTranslation()
-  
+
   return (
       <>
         <div class="clear"></div>
@@ -17,13 +17,13 @@ export default function Footer() {
                 <NavLink href="/">{t("home")}</NavLink>
               </li>
               <li>
-                <NavLink href="profile.html">{t("profile")}</NavLink>
+                <NavLink href="profile">{t("profile")}</NavLink>
               </li>
               <li>
-                <NavLink href="cv.html">{t("cv")}</NavLink>
+                <NavLink href="cv">{t("cv")}</NavLink>
               </li>
               <li>
-                <NavLink href="contact.html">{t("contact")}</NavLink>
+                <NavLink href="contact">{t("contact")}</NavLink>
               </li>
             </ul>
             <span class="soc-icons">

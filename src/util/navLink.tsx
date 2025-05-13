@@ -1,23 +1,9 @@
-import { useLocation } from "preact-iso";
-import type { JSX } from "preact";
+import type { ComponentChildren } from "preact";
 
-interface NavLinkProps {
-    href: string;
-    className?: string;
-    children: JSX.Element | string | (JSX.Element | string)[];
+export function NavLink(props: {
+  href: string;
+  children: ComponentChildren;
+  className?: string;
+}) {
+  return <a href={props.href} className={props.className}>{props.children}</a>;
 }
-
-export const NavLink = ({ href, className, children }: NavLinkProps) => {
-    const location = useLocation();
-
-    const handleClick = (e: MouseEvent) => {
-        e.preventDefault();
-        location.route(href);
-    };
-
-    return (
-        <a href={href} className={className} onClick={handleClick}>
-            {children}
-        </a>
-    );
-};
