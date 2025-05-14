@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0; url=./" />
+  </head>
+  <body>
+    <script>
+      // Support for client-side routing
+      var redirect = '/';
+      if (location.pathname && location.pathname !== '/') {
+        redirect += location.pathname.replace(/^\//, '');
+      }
+      if (location.search) {
+        redirect += location.search;
+      }
+      if (location.hash) {
+        redirect += location.hash;
+      }
+      location.replace(redirect);
+    </script>
+    <p>Redirecting...</p>
+  </body>
+</html>
