@@ -79,9 +79,10 @@ export default function Cv({ htmlContent: initialHtmlContent }: { htmlContent?: 
       <Header />
       <div 
         className="container" 
-        style={{ margin: '0 auto', maxWidth: '50%' }} 
-        dangerouslySetInnerHTML={{ __html: currentHtmlContent || "" }} 
-      />
+        style={{ display: 'flex', justifyContent: 'center' }} 
+      >
+        <div style={{ maxWidth: '480px', width: '100%' }} dangerouslySetInnerHTML={{ __html: currentHtmlContent || "" }} />
+      </div>
       <Footer />
     </>
   );
