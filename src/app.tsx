@@ -24,6 +24,8 @@ export default function App() {
               <span class="red">{t("app.title.freelanceProgrammer")}</span>
               <br />
               {t("app.title.remoteProgrammer")}
+              <br />
+              <span class="red">{t("app.title.aiProcesses")}</span>
             </h1>
             <p style="width: 75%">
               <strong>
@@ -31,7 +33,7 @@ export default function App() {
               </strong>
               <br />
               {t("app.teaser.contactIntro")}{" "}
-              <a href="contact.html">{t("contact")}</a>.
+              <NavLink href="/contact">{t("contact")}</NavLink>.
             </p>
             <p>
               <strong>{t("app.teaser.experience")}</strong> {t("app.teaser.experienceYears")}
@@ -65,6 +67,30 @@ export default function App() {
             <span class="red">{t("app.content.languagesTitlePart1")}</span> {t("app.content.languagesTitlePart2")}
           </h2>
           <ul id="logoshome">
+            <li>
+              <img
+                alt="chatgpt"
+                height="40"
+                src="content/chatgpt.png"
+                width="80"
+              />
+            </li>
+            <li>
+              <img
+                alt="claude"
+                height="40"
+                src="content/claude.png"
+                width="80"
+              />
+            </li>
+            <li>
+              <img
+                alt="n8n"
+                height="40"
+                src="content/n8n.png"
+                width="80"
+              />
+            </li>
             <li>
               <img alt="golang" height="40" src="content/golang.png" width="80" />
             </li>
@@ -315,6 +341,7 @@ export default function App() {
             <li>{t("app.expertise.projectManagement")}</li>
             <li>{t("app.expertise.projectPlanning")}</li>
             <li>{t("app.expertise.customerManagement")}</li>
+            <li>{t("app.expertise.aiProcesses")}</li>
             <li>{t("app.expertise.etc")}</li>
           </ul>
           <p>

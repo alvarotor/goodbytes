@@ -277,6 +277,7 @@ ul#flags {
 			-webkit-border-radius: 3px;
 			-moz-border-radius: 3px;
 			border-radius: 3px;
+			cursor: pointer;
 		}
 
 			#flags li a:hover, #flags li a.on {
