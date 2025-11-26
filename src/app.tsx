@@ -2,9 +2,12 @@ import { Header } from "./header"
 import Footer from "./footer"
 import { useTranslation } from "react-i18next";
 import { NavLink } from "./util/navLink";
+import { useSeo, seoConfigs } from "./util/useSeo";
 
 export default function App() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language?.startsWith('es') ? 'es' : 'en';
+  useSeo(seoConfigs.home(lang));
   return (
     <>
       <Header />
@@ -88,6 +91,14 @@ export default function App() {
                 alt="n8n"
                 height="40"
                 src="content/n8n.png"
+                width="80"
+              />
+            </li>
+            <li>
+              <img
+                alt="langchain"
+                height="40"
+                src="content/langchain.png"
                 width="80"
               />
             </li>
@@ -283,15 +294,7 @@ export default function App() {
                 width="80"
               />
             </li>
-            <li>
-              <img
-                alt="nancy"
-                height="40"
-                src="content/logo-nancy.jpg"
-                width="80"
-              />
-            </li>
-            <li>
+                        <li>
               <img
                 alt="sqlserver"
                 height="40"

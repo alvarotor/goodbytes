@@ -1,9 +1,12 @@
 import { Header } from "./header";
 import Footer from "./footer";
 import { useTranslation } from "react-i18next";
+import { useSeo, seoConfigs } from "./util/useSeo";
 
 export default function Profile() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language?.startsWith('es') ? 'es' : 'en';
+  useSeo(seoConfigs.profile(lang));
   return (
     <>
       <Header />

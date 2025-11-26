@@ -46,6 +46,10 @@ jobs:
           pnpm --version
       - name: Install dependencies
         run: pnpm install
+      - name: Run linter
+        run: pnpm run lint
+      - name: Run type check
+        run: pnpm run typecheck
       - name: Build project
         run: pnpm run build
       - name: Setup Pages

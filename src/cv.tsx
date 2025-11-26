@@ -3,6 +3,8 @@ import Footer from "./footer";
 import fs from 'fs'; // Used by getStaticProps (server/build time)
 import path from 'path'; // Used by getStaticProps (server/build time)
 import { useState, useEffect } from 'preact/hooks';
+import { useTranslation } from "react-i18next";
+import { useSeo, seoConfigs } from "./util/useSeo";
 
 // getStaticProps remains for Next.js pages/cv.tsx to use
 export async function getStaticProps() {
@@ -16,6 +18,10 @@ export async function getStaticProps() {
 }
 
 export default function Cv({ htmlContent: initialHtmlContent }: { htmlContent?: string }) {
+  const { i18n } = useTranslation();
+  const lang = i18n.language?.startsWith('es') ? 'es' : 'en';
+  useSeo(seoConfigs.cv(lang));
+
   const [currentHtmlContent, setCurrentHtmlContent] = useState(initialHtmlContent);
   const [isLoading, setIsLoading] = useState(!initialHtmlContent);
   const [error, setError] = useState<string | null>(null);

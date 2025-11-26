@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage - English (default) -->
+  <url>
+    <loc>https://goodbytes.net/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goodbytes.net/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://goodbytes.net/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://goodbytes.net/"/>
+    <lastmod>2025-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Homepage - Spanish -->
+  <url>
+    <loc>https://goodbytes.net/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goodbytes.net/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://goodbytes.net/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://goodbytes.net/"/>
+    <lastmod>2025-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Profile - English -->
+  <url>
+    <loc>https://goodbytes.net/profile</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goodbytes.net/profile"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://goodbytes.net/es/profile"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://goodbytes.net/profile"/>
+    <lastmod>2025-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Profile - Spanish -->
+  <url>
+    <loc>https://goodbytes.net/es/profile</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goodbytes.net/profile"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://goodbytes.net/es/profile"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://goodbytes.net/profile"/>
+    <lastmod>2025-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact - English -->
+  <url>
+    <loc>https://goodbytes.net/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goodbytes.net/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://goodbytes.net/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://goodbytes.net/contact"/>
+    <lastmod>2025-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact - Spanish -->
+  <url>
+    <loc>https://goodbytes.net/es/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goodbytes.net/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://goodbytes.net/es/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://goodbytes.net/contact"/>
+    <lastmod>2025-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- CV - English -->
+  <url>
+    <loc>https://goodbytes.net/cv</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://goodbytes.net/cv"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://goodbytes.net/cv"/>
+    <lastmod>2025-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>

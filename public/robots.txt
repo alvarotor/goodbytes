@@ -1,0 +1,28 @@
+# Robots.txt for goodbytes.net
+# https://goodbytes.net
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://goodbytes.net/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Block access to private/admin areas (if any)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+
+# Allow specific important files
+Allow: /manifest.json
+Allow: /sitemap.xml
+
+# Block temporary and build files
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /.git/
+
+# Host directive (optional, helps some crawlers)
+Host: https://goodbytes.net
