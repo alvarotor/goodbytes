@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(/home/alvaro/Pictures/Screenshots/**)",
+      "Read(/home/alvaro/Pictures/Screenshots/**)",
+      "Read(/home/alvaro/Pictures/Screenshots/**)",
+      "WebSearch",
+      "Bash(curl:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
