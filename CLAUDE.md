@@ -8,7 +8,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 pnpm dev       # Start development server (Vite)
 pnpm build     # TypeScript type-check and production build
 pnpm preview   # Preview production build locally
+pnpm lint      # Run ESLint on src directory
+pnpm lint:fix  # Run ESLint with --fix on src directory
+pnpm typecheck # Run TypeScript type checking
 ```
+
+## Deployment
+
+The site is deployed to GitHub Pages via a GitHub Actions workflow on pushes to the `master` branch. The workflow:
+
+- Installs dependencies with pnpm
+- Runs linting and type checking
+- Builds the project
+- Copies `index.html` to `404.html` for SPA routing
+- Deploys the `dist` directory to GitHub Pages
 
 ## Architecture Overview
 
