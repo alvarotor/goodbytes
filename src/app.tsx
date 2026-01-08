@@ -22,14 +22,12 @@ export default function App() {
               <br />
               <span class="red">{t("app.title.mobileApps")}</span>
               <br />
-              {t("app.title.fullStackEngineer")}
-              <br />
-              <span class="red">{t("app.title.freelanceProgrammer")}</span>
-              <br />
-              {t("app.title.remoteProgrammer")}
-              <br />
-              <span class="red">{t("app.title.aiProcesses")}</span>
-            </h1>
+               {t("app.title.fullStackEngineer")}
+               <br />
+               <span class="red">{t("app.title.aiProcesses")}</span>
+               <br />
+               {t("app.title.digitalTransformation")}
+             </h1>
             <p style="width: 75%">
               <strong>
                 {t("app.teaser.keywords")}
@@ -307,6 +305,62 @@ export default function App() {
                 alt="tsql"
                 height="40"
                 src="content/logo-tsql.jpg"
+                width="80"
+              />
+            </li>
+            <li>
+              <img
+                alt="react native"
+                height="40"
+                src="content/react-native.png"
+                width="80"
+              />
+            </li>
+            <li>
+              <img
+                alt="redis"
+                height="40"
+                src="content/redis.png"
+                width="80"
+              />
+            </li>
+            <li>
+              <img
+                alt="traefik"
+                height="40"
+                src="content/traefik_new.png"
+                width="80"
+              />
+            </li>
+            <li>
+              <img
+                alt="github actions"
+                height="40"
+                src="content/github-actions.png"
+                width="80"
+              />
+            </li>
+            <li>
+              <img
+                alt="swagger"
+                height="40"
+                src="content/swagger.png"
+                width="80"
+              />
+            </li>
+            <li>
+              <img
+                alt="graphql"
+                height="40"
+                src="content/graphql.png"
+                width="80"
+              />
+            </li>
+            <li>
+              <img
+                alt="ollama"
+                height="40"
+                src="content/ollama.png"
                 width="80"
               />
             </li>
