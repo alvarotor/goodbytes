@@ -96,12 +96,15 @@ export function Header() {
           <li>
             <NavLink href="profile" className={isActive("profile") ? "on" : ""}>{t("profile")}</NavLink>
           </li>
-          <li>
-            <NavLink href="cv" className={isActive("cv") ? "on" : ""}>{t("cv")}</NavLink>
-          </li>
-          <li>
-            <NavLink href="contact" className={isActive("contact") ? "on" : ""}>{t("contact")}</NavLink>
-          </li>
+           <li>
+             <NavLink href="cv" className={isActive("cv") ? "on" : ""}>{t("cv")}</NavLink>
+           </li>
+           <li>
+             <a href="#" onClick={(e) => { e.preventDefault(); const link = document.createElement('a'); link.href = '/CV-Alvaro-Torres-Jan-2026.pdf'; link.download = 'CV-Alvaro-Torres-Jan-2026.pdf'; link.click(); }}>CV PDF</a>
+           </li>
+           <li>
+             <NavLink href="contact" className={isActive("contact") ? "on" : ""}>{t("contact")}</NavLink>
+           </li>
         </ul>
       </div>
       <div class="clear"></div>
