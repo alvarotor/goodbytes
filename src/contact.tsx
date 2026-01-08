@@ -1,15 +1,19 @@
- import { useState } from "preact/hooks";
+ import { useState, useEffect } from "preact/hooks";
  import { Header } from "./header";
  import Footer from "./footer";
  import { useTranslation } from "react-i18next";
  import { useSeo, seoConfigs } from "./util/useSeo";
 
-const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/goodbytes23@gmail.com';
+const FORMSUBMIT_URL = 'https://formsubmit.co/goodbytes23@gmail.com';
 
 export default function Contact() {
   const { t, i18n } = useTranslation();
   const lang = i18n.language?.startsWith('es') ? 'es' : 'en';
   useSeo(seoConfigs.contact(lang));
+
+  // Check if redirected back from successful form submission
+  const urlParams = new URLSearchParams(window.location.search);
+  const isSuccessRedirect = urlParams.get('success') === 'true';
 
   const [formData, setFormData] = useState({
     name: '',
@@ -18,7 +22,16 @@ export default function Contact() {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted] = useState(isSuccessRedirect);
+
+  // Clean up URL when showing success state
+  useEffect(() => {
+    if (isSuccessRedirect) {
+      // Clean up the URL by removing the success parameter
+      const newUrl = window.location.pathname;
+      window.history.replaceState({}, '', newUrl);
+    }
+  }, [isSuccessRedirect]);
 
   const handleSubmit = (e: Event) => {
     e.preventDefault();
@@ -36,7 +49,8 @@ export default function Contact() {
       { name: 'email', value: formData.email },
       { name: 'company', value: formData.company },
       { name: 'message', value: formData.message },
-      { name: '_subject', value: 'Nuevo mensaje de contacto - Goodbytes' }
+      { name: '_subject', value: 'Nuevo mensaje de contacto - Goodbytes' },
+      { name: '_next', value: window.location.origin + '/contact?success=true' }
     ];
 
     fields.forEach(field => {
@@ -51,20 +65,7 @@ export default function Contact() {
     document.body.appendChild(tempForm);
     tempForm.submit();
 
-    // Clean up
-    document.body.removeChild(tempForm);
-
-    // Show success state after a short delay
-    setTimeout(() => {
-      setIsSubmitted(true);
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        message: ''
-      });
-      setIsSubmitting(false);
-    }, 1000);
+    // Note: Form will redirect to formsubmit.co and then back to /contact?success=true
   };
 
   const handleChange = (e: Event) => {
