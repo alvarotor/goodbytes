@@ -104,6 +104,9 @@
     "contact.company":"Company",
     "contact.message":"Message",
     "contact.send":"Send",
+    "contact.sending":"Sending...",
+    "contact.successTitle":"Message Sent!",
+    "contact.successMessage":"Thank you for your message. I'll get back to you soon.",
     "contact.details":"Contact Details",
     "contact.emailLabel":"Email",
     "contact.city":"City"

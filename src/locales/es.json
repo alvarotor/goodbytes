@@ -103,6 +103,9 @@
     "contact.company":"Empresa",
     "contact.message":"Mensaje",
     "contact.send":"Enviar",
+    "contact.sending":"Enviando...",
+    "contact.successTitle":"¡Mensaje Enviado!",
+    "contact.successMessage":"Gracias por tu mensaje. Me pondré en contacto contigo pronto.",
     "contact.details":"Detalles de contacto",
     "contact.emailLabel":"Correo electrónico",
     "contact.city":"Ciudad"
