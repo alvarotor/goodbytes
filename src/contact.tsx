@@ -20,31 +20,42 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async (e: Event) => {
+  const handleSubmit = (e: Event) => {
     e.preventDefault();
-
     setIsSubmitting(true);
 
-    try {
-      const response = await fetch(FORMSUBMIT_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          company: formData.company,
-          message: formData.message,
-          _subject: 'Nuevo mensaje de contacto - Goodbytes'
-        })
-      });
+    // Create a temporary form for submission
+    const tempForm = document.createElement('form');
+    tempForm.method = 'POST';
+    tempForm.action = FORMSUBMIT_URL;
+    tempForm.style.display = 'none';
 
-      if (!response.ok) {
-        throw new Error('Form submission failed');
-      }
+    // Add form fields
+    const fields = [
+      { name: 'name', value: formData.name },
+      { name: 'email', value: formData.email },
+      { name: 'company', value: formData.company },
+      { name: 'message', value: formData.message },
+      { name: '_subject', value: 'Nuevo mensaje de contacto - Goodbytes' }
+    ];
 
+    fields.forEach(field => {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = field.name;
+      input.value = field.value;
+      tempForm.appendChild(input);
+    });
+
+    // Add form to body and submit
+    document.body.appendChild(tempForm);
+    tempForm.submit();
+
+    // Clean up
+    document.body.removeChild(tempForm);
+
+    // Show success state after a short delay
+    setTimeout(() => {
       setIsSubmitted(true);
       setFormData({
         name: '',
@@ -52,12 +63,8 @@ export default function Contact() {
         company: '',
         message: ''
       });
-    } catch (error) {
-      console.error('Form submission error:', error);
-      alert('Error sending message. Please try again later.');
-    } finally {
       setIsSubmitting(false);
-    }
+    }, 1000);
   };
 
   const handleChange = (e: Event) => {
