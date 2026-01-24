@@ -1,12 +1,14 @@
 import { Header } from "./header";
 import Footer from "./footer";
-import fs from 'fs'; // Used by getStaticProps (server/build time)
-import path from 'path'; // Used by getStaticProps (server/build time)
 import { useState, useEffect } from 'preact/hooks';
 import { useTranslation } from "react-i18next";
 import { useSeo, seoConfigs } from "./util/useSeo";
 
-// getStaticProps remains for Next.js pages/cv.tsx to use
+// getStaticProps documentation for Next.js compatibility:
+// This function would be used in a Next.js environment to statically generate
+// the CV page with HTML content from cv.html. In this Vite/Preact setup,
+// the content is fetched client-side via the useEffect hook.
+/*
 export async function getStaticProps() {
   const filePath = path.join(process.cwd(), 'public', 'cv.html');
   const htmlContent = fs.readFileSync(filePath, 'utf8');
@@ -16,6 +18,7 @@ export async function getStaticProps() {
     },
   };
 }
+*/
 
 export default function Cv({ htmlContent: initialHtmlContent }: { htmlContent?: string }) {
   const { i18n } = useTranslation();
@@ -41,8 +44,7 @@ export default function Cv({ htmlContent: initialHtmlContent }: { htmlContent?: 
           setCurrentHtmlContent(data);
           setIsLoading(false);
         })
-        .catch(fetchError => {
-          console.error("Failed to load CV HTML client-side:", fetchError);
+        .catch(() => {
           setError("Failed to load CV content. Please try again later.");
           setIsLoading(false);
         });
@@ -83,11 +85,11 @@ export default function Cv({ htmlContent: initialHtmlContent }: { htmlContent?: 
   return (
     <>
       <Header />
-      <div 
-        className="container" 
-        style={{ display: 'flex', justifyContent: 'center' }} 
+      <div
+        className="container"
+        style={{ display: 'flex', justifyContent: 'center' }}
       >
-        <div style={{ maxWidth: '480px', width: '100%' }} dangerouslySetInnerHTML={{ __html: currentHtmlContent || "" }} />
+        <div style={{ maxWidth: '600px', width: '100%' }} dangerouslySetInnerHTML={{ __html: currentHtmlContent || "" }} />
       </div>
       <Footer />
     </>
