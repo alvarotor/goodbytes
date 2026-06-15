@@ -1,0 +1,11 @@
+allowBuilds:
+  esbuild: true
+
+onlyBuiltDependencies:
+  - esbuild
+
+overrides:
+  minimatch: ^9.0.7
+  ajv: ^6.14.0
+  rollup: ^4.59.0
+  semver: ^7.5.2
