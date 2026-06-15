@@ -100,7 +100,7 @@ export const seoConfigs = {
     const configs: Record<string, SeoConfig> = {
       en: {
         title: 'Alvaro Torres - Senior Software Architect & Full Stack Developer | 20+ Years Experience',
-        description: 'Senior Software Architect with 20+ years of experience specializing in full-stack development, cloud architecture, microservices, AI processes, and mobile apps. Expertise in Golang, React, Node.js, AWS, and Docker.',
+        description: 'Senior Software Architect with 20+ years of experience specializing in full-stack development, cloud architecture, microservices, AI processes, agentic workflows, and mobile apps. Expertise in Golang, React, Node.js, AWS, and Docker.',
         canonical: BASE_URL + '/',
         ogType: 'profile',
         structuredData: {
@@ -121,7 +121,7 @@ export const seoConfigs = {
       },
       es: {
         title: 'Alvaro Torres - Arquitecto de Software Senior & Desarrollador Full Stack | +20 Años de Experiencia',
-        description: 'Arquitecto de Software Senior con más de 20 años de experiencia especializado en desarrollo full-stack, arquitectura cloud, microservicios, procesos de IA y aplicaciones móviles. Experto en Golang, React, Node.js, AWS y Docker.',
+        description: 'Arquitecto de Software Senior con más de 20 años de experiencia especializado en desarrollo full-stack, arquitectura cloud, microservicios, procesos de IA, flujos de trabajo agentic y aplicaciones móviles. Experto en Golang, React, Node.js, AWS y Docker.',
         canonical: BASE_URL + '/es/',
         ogType: 'profile',
         structuredData: {
@@ -148,7 +148,7 @@ export const seoConfigs = {
     const configs: Record<string, SeoConfig> = {
       en: {
         title: 'Professional Profile - Alvaro Torres | Software Architect & Full Stack Developer',
-        description: 'Learn about Alvaro Torres, a passionate software architect with 20+ years of experience in full-stack development, mobile apps, cloud services, and AI processes. Problem solver with expertise across multiple industries.',
+        description: 'Learn about Alvaro Torres, a passionate software architect with 20+ years of experience in full-stack development, mobile apps, cloud services, AI processes, and agentic workflows. Problem solver with expertise across multiple industries.',
         canonical: BASE_URL + '/profile',
         structuredData: {
           "@context": "https://schema.org",
@@ -160,13 +160,13 @@ export const seoConfigs = {
             "name": "Alvaro Torres",
             "jobTitle": "Senior Software Architect",
             "description": "20+ years of experience in software development",
-            "knowsAbout": ["Software Architecture", "Full Stack Development", "Mobile Development", "Cloud Computing", "AI Processes"]
+            "knowsAbout": ["Software Architecture", "Full Stack Development", "Mobile Development", "Cloud Computing", "AI Processes", "Agentic Workflows", "AI-Assisted Development"]
           }
         }
       },
       es: {
         title: 'Perfil Profesional - Alvaro Torres | Arquitecto de Software & Desarrollador Full Stack',
-        description: 'Conoce a Alvaro Torres, un arquitecto de software apasionado con más de 20 años de experiencia en desarrollo full-stack, aplicaciones móviles, servicios cloud y procesos de IA.',
+        description: 'Conoce a Alvaro Torres, un arquitecto de software apasionado con más de 20 años de experiencia en desarrollo full-stack, aplicaciones móviles, servicios cloud, procesos de IA y flujos de trabajo agentic.',
         canonical: BASE_URL + '/es/profile',
         structuredData: {
           "@context": "https://schema.org",

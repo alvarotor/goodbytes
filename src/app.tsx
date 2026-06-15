@@ -399,6 +399,8 @@ export default function App() {
             <li>{t("app.expertise.projectPlanning")}</li>
             <li>{t("app.expertise.customerManagement")}</li>
             <li>{t("app.expertise.aiProcesses")}</li>
+            <li>{t("app.expertise.agenticWorkflows")}</li>
+            <li>{t("app.expertise.aiAssistedDev")}</li>
             <li>{t("app.expertise.etc")}</li>
           </ul>
           <p>
@@ -438,6 +440,12 @@ export default function App() {
             </p>
             <p class="author">
               {t("app.sidebar.author5")}
+            </p>
+            <p class="quote">
+              {t("app.sidebar.quote6")}
+            </p>
+            <p class="author">
+              {t("app.sidebar.author6")}
             </p>
           </div>
         </div>
